@@ -1,6 +1,7 @@
 void main() {
   print('starting');
 
+  // difficul to understand
   httpGet('https://takataka.com').then((value) {
     print(value);
   }).catchError((err) {

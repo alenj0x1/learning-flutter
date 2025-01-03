@@ -1,7 +1,7 @@
 void main() {
-  final mySquare = Square(side: 10);
+  final mySquare = Square(side: -15);
 
-  mySquare.side = 5;
+  // mySquare.side = -10;
 
   print('area: ${mySquare.area}');
 }
@@ -10,7 +10,9 @@ class Square {
   // private properties double _side;
   double _side;
 
-  Square({required side}) : _side = side;
+  Square({required double side})
+      : assert(side >= 0, 'side must be major to zero'),
+        _side = side;
 
   double get area {
     return _side * _side;

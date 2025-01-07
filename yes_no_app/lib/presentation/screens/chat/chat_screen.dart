@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:yes_no_app/presentation/widgets/chat/her_message_buble.dart';
 import 'package:yes_no_app/presentation/widgets/chat/my_message_bubble.dart';
+import 'package:yes_no_app/presentation/widgets/shared/message_field_box.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    const avatarUrl =
+        'https://i.pinimg.com/736x/73/03/1b/73031b96a34ed67524f64992ebf150dd.jpg';
+
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: CircleAvatar(
-            backgroundImage: NetworkImage(
-                'https://i.pinimg.com/736x/73/03/1b/73031b96a34ed67524f64992ebf150dd.jpg'),
+            backgroundImage: NetworkImage(avatarUrl),
           ),
         ),
         title: Column(
@@ -49,7 +52,7 @@ class _ChatView extends StatelessWidget {
                         : HerMessageBubble();
                   }),
             ),
-            Text('mundo'),
+            MessageFieldBox(),
           ],
         ),
       ),

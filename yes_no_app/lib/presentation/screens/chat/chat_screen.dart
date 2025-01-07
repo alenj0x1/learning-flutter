@@ -23,9 +23,21 @@ class ChatScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Mina 🐧'),
-            Text(
-              'Connected',
-              style: TextStyle(fontSize: 10),
+            Row(
+              children: [
+                Icon(
+                  Icons.circle,
+                  size: 10,
+                  color: Colors.green,
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  'Connected',
+                  style: TextStyle(fontSize: 10),
+                ),
+              ],
             ),
           ],
         ),

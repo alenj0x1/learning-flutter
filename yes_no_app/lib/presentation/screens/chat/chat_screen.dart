@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yes_no_app/presentation/widgets/chat/my_message_bubble.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -14,7 +15,17 @@ class ChatScreen extends StatelessWidget {
                 'https://i.pinimg.com/736x/73/03/1b/73031b96a34ed67524f64992ebf150dd.jpg'),
           ),
         ),
-        title: Text('Mina 🐧'),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Mina 🐧'),
+            Text(
+              'Connected',
+              style: TextStyle(fontSize: 10),
+              
+            ),
+          ],
+        ),
       ),
       body: _ChatView(),
     );
@@ -33,7 +44,7 @@ class _ChatView extends StatelessWidget {
               child: ListView.builder(
                   itemCount: 20,
                   itemBuilder: (context, index) {
-                    return Text('taka');
+                    return MyMessageBubble();
                   }),
             ),
             Text('mundo'),

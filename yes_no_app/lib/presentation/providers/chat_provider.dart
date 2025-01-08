@@ -28,7 +28,7 @@ class ChatProvider extends ChangeNotifier {
 
   void moveScrollToBottom() {
     chatScrollController.animateTo(
-      chatScrollController.position.maxScrollExtent + 100,
+      chatScrollController.position.maxScrollExtent + 200,
       duration: Duration(milliseconds: 100),
       curve: Curves.bounceInOut,
     );
